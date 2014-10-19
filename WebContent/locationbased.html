@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Location Based Data</title>
+</head>
+<style>
+.container {
+	height: 250px;
+	clear: both;
+	background-color: #DEE;
+}
+</style>
+<body>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="http://www.ehs.ucsf.edu/sites/ehs.ucsf.edu/files/images/Public%20Health%20Logo%20sized.jpg"
+		height="100" width="150">
+	<img src="http://www.cdc.gov/phps/images/PHPS%20Bucket%203%20logo.png"
+		alt="logo" height="120" width="1000">
+	<img src="http://www.phac-aspc.gc.ca/about_apropos/evaluation/reports-rapports/2012-2013/sf-fs/assets/images/surveillance.jpg"
+		height="100" width="100">
+	<div class='container'>
+		<h2 align="center">Location Based Health Indicator Information
+			based on Survey Data</h2>
+		<form id="indicators" action='getlocationdata'>
+
+			<!-- <legend align='left'>Demographic Information</legend> -->
+			<fieldset id='buttons'>
+				<p>
+					<label>Select State:</label> <select form="indicators"
+						name="hi_state" size=0 autofocus required>
+
+						<option value="Texas" selected="selected">Texas</option>
+						<option value="Newyork">New York</option>
+						<option value="California">California</option>
+						<option value="Massachussets">Massachussets</option>
+					</select>
+				</p>
+
+
+
+				<p>
+					<label>Select Health Indicator:</label> <select form="indicators"
+						name="hi_indicator" size=0 autofocus required>
+						<option value="Diabetes" selected="selected">Diabetes</option>
+						<option value="Smoking">Smoking</option>
+						<option value="Cancer">Cancer</option>
+						<option value="Asthma">Asthma</option>
+						<option value="Arthritis">Arthritis</option>
+						<option value="Obesity">Obesity</option>
+						<option value="Alcohol">Alcohol</option>
+					</select>
+				</p>
+
+
+				<p>
+					<label>Select Year:</label> <select form="indicators"
+						name="hi_year" size=0 autofocus required>
+						<option value="last3">Last 3 Years</option>
+						<option value="last5">Last 5 Years</option>
+						<option value="2013">2013</option>
+						<option value="2014" selected="selected">2014</option>
+					</select>
+				</p>
+
+				<table>
+					<tr>
+						<td><input type="submit" value="Find Data!"></td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+		<a href="index.html">Log Out</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Health Officials Login</title>
+</head>
+<style>
+body {
+	horizontal-align: middle;
+	text-align: center;
+}
+
+.styleform fieldset {
+	clear: both;
+	background-color: #BBC;
+	text-align: center;
+}
+
+.styleform footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	}
+
+</style>
+
+
+<body>
+	<img
+		src="http://www.ehs.ucsf.edu/sites/ehs.ucsf.edu/files/images/Public%20Health%20Logo%20sized.jpg"
+		height="100" width="150">
+	<img src="http://www.cdc.gov/phps/images/PHPS%20Bucket%203%20logo.png"
+		alt="logo" height="120" width="600">
+	<img
+		src="http://www.phac-aspc.gc.ca/about_apropos/evaluation/reports-rapports/2012-2013/sf-fs/assets/images/surveillance.jpg"
+		height="100" width="100">
+
+	<div class="styleform">
+
+	<form id="login"  action="officiallogin" method="post">
+	
+		<fieldset id="inputs">
+		<h2 align='center'>Health Officials Login</h2>
+			<p>
+				<label>UserName:</label>
+				<input id="name" name="official_login" type="text" placeholder="UserName" required>
+			</p>
+			<p>
+				<label>Password:</label>
+				<input id="password" name="official_password" type="password" placeholder="****" required>
+			</p>
+			<p>
+				<input type="submit" id="submit" value="Login">
+				<input type="reset" id="cancel" value="Cancel">
+			</p>
+			
+		</fieldset>
+
+	<a href="index.html">Home</a><br/>
+	</form></div>
+	<div class='styleform'>
+	<footer>
+
+			<p>
+				Health Surveillance &#169; UT Arlington CSE 2014<br />
+				Contact information:<a href="mailto:someone@example.com">email@email.com</a>
+			</p>
+
+		</footer></div>
+</body>
+
+</html>

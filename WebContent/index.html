@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Health Surveillance</title>
+</head>
+<style type="text/css">
+.container {
+	height: 350px;
+	clear: both;
+	background-color: #DDE;
+	position: relative;
+}
+
+body {
+	horizontal-align: middle;
+	text-align: center;
+}
+
+.styleform footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: table;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	/* Height of the footer */
+}
+
+.styleform fieldset {
+	clear: both;
+	background-color: #DDD;
+	text-align: center;
+	height: 200px;
+	border-radius: 8px;
+}
+
+.styleform table,th,td {
+	border: 1px solid black;
+	text-align: middle;
+	padding: 10px 50px;
+}
+
+.style1 table {
+	position: relative;
+	float: left;
+	left: 200px;
+}
+
+.style2 table {
+	position: relative;
+	float: right;
+	right: 200px;
+}
+</style>
+<body>
+	<img src="http://www.ehs.ucsf.edu/sites/ehs.ucsf.edu/files/images/Public%20Health%20Logo%20sized.jpg" height="100" width="150">
+	<img src="https://www.uta.edu/engineering/_downloads/graphics/new_coe_signature.jpg"
+		alt="logo" height="100" width="1024">
+	<img src="http://www.phac-aspc.gc.ca/about_apropos/evaluation/reports-rapports/2012-2013/sf-fs/assets/images/surveillance.jpg" height="100" width="100">
+	<div class='container'>
+		<br />
+		<fieldset id="buttons">
+		<h2 align='center'>Public Health Surveillance</h2>
+		
+			<form action="insert.html" method="get">
+			<div class="style1">
+			<table>
+			<tr>
+			<th><p>If you are a citizen of<br/>Texas, New York, California, Massachussets,<br/>
+			please click below to take part<br/>
+			in the UTA Public Health Surveillance 2014</p></th>
+			</tr>
+			<tr><td>
+				<input type="submit" value="Click here to take part in the survey">
+			</td></tr>
+			
+			</table>
+			</div>
+			</form>
+			
+			<form action="login.html" method="get">
+			<div class="style2">
+			<table>
+			
+			<tr>
+			<th><p>If you are a Health Official<br/>
+			please click below to view<br/>
+			the Health related information of citizens in<br/>
+			Texas, New York, Masachussets, California</p></th>
+			</tr>
+			<tr><td>
+				<input type="submit" value="Click here to login as Health Official">
+			</td></tr>
+			</table>
+			</div>
+			</form><br/>
+		</fieldset>
+	</div>
+	
+	<div class='styleform'>
+		<footer>
+
+			<p>Health Surveillance &#169; UTA 2014<br /> Contact information:<a
+					href="mailto:someone@example.com">email@email.com</a>
+			</p>
+
+		</footer>
+	</div>
+	<!-- <form>
+		<input type="submit" value="Health Indicators">
+	</form> -->
+
+</body>
+</html>

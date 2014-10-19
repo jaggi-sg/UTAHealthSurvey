@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Take the Survey</title>
+<script type="text/javascript" src="js/countries.js"></script>
+</head>
+<style type="text/css">
+.container {
+	text-align: center;
+	clear: both;
+	background-color: #DDE;
+}
+
+.styleform h2 {
+	text-align: center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+
+.styleform p {
+	text-align: center;
+}
+
+.styleform label {
+	float: left;
+	width: 40%;
+	text-align: right;
+}
+
+.styleform input {
+	float: left;
+	width: 30%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.styleform select {
+	float: left;
+	width: 30%;
+}
+
+.styleform textarea {
+	float: left;
+	width: 30%;
+}
+
+.styleform legend {
+	font-size: 105%;
+	color: green;
+	text-align: center;
+	text: bold;
+}
+
+.styleform footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	display: table;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+</style>
+
+<body>
+	<img
+		src="http://www.ehs.ucsf.edu/sites/ehs.ucsf.edu/files/images/Public%20Health%20Logo%20sized.jpg"
+		height="100" width="150">
+	<img
+		src="https://www.uta.edu/engineering/_downloads/graphics/new_coe_signature.jpg"
+		alt="logo" height="100" width="1000">
+	<img
+		src="http://4.bp.blogspot.com/-DdaXd4Youbs/UgprIPtF_VI/AAAAAAAADYI/fGyf66a0LO8/s1600/Survey.png"
+		height="100" width="140">
+
+	<div class="container">
+		<br />
+		<div class="styleform">
+			<h2 align="center">HEALTH SURVEILLANCE WEB FORM</h2></div>
+			<div style="float:right;position:relative;text-align:right;">
+			<a href="index.html">Home</a><br/>
+			
+		</div>
+		<marquee behavior="scroll" scrolldelay="100" bgcolor="#66CC01">Please submit the health survey for year 2014!</marquee>
+		<div class="styleform">
+			<form id="registration" action="surveyadded">
+
+				<fieldset id="inputs">
+					<legend align='left'>Demographic Information</legend>
+					<p>
+						<label>First Name:</label> <input id="fname" type="text"
+							name='survey_fname' placeholder="First Name" autofocus>
+					</p>
+					<p>
+						<label>Last Name:</label> <input id="lname" type="text"
+							name='survey_lname' placeholder="Last Name" autofocus>
+					</p>
+					<p>
+						<label>Social Security Number (SSN):</label> <input id="ssn"
+							type="text" name='survey_ssn' placeholder="SSN" autofocus required>
+					</p>
+					<p>
+						<label>Address:</label> <input id="address" type="text"
+							name='survey_address' placeholder="Address" autofocus>
+						<!-- <label>Address:</label> 
+							<textarea name="Address" form="registration" name='survey_address' placeholder="Address" cols=5 rows=5></textarea>
+						 -->
+					</p>
+					<p>
+						<label>Gender:</label>
+						<!-- Male<input type="radio" name='survey_gender' value='M'><br/>
+							Female<input type="radio" name='survey_gender' value='F'><br/> -->
+
+						<select form="registration" name='survey_gender' size=0 autofocus>
+							<option value="M" selected="selected">Male</option>
+							<option value="F">Female</option>
+						</select>
+					</p>
+					<p>
+						<label>Date Of Birth:</label> <input id="dob" type="date"
+							name='survey_dob' placeholder="Date Of Birth">
+					</p>
+					<p>
+						<label>Phone:</label> <input id="phone" type="text" name='survey_phone' placeholder="Phone" size=10>
+					</p>
+					<p>
+						<label>Select State:</label> <select
+							onchange="print_city('city',this.selectedIndex);" id="state"
+							name="survey_state"></select> <br />
+
+						<!-- <label>State:</label>
+							<select form="registration" name='survey_state' size=0 autofocus  >
+							<option value="Texas" selected="selected">Texas</option>
+							<option value="Newyork">New York</option>
+							<option value="Washington">Washington DC</option>
+							<option value="Massachussets">Massachussets</option>
+							</select> -->
+					</p>
+					<p>
+						<label>City:</label> <select name="survey_city" id="city"></select>
+						<script language="javascript">print_state("state");</script>
+						<!-- <select form="registration" name='survey_city' size=0 autofocus  >
+							<option value="Dallas">Dallas</option>
+							<option value="Austin">Austin</option>
+							<option value="San Antonio">San Antonio</option>
+							<option value="Fort Worth">Fort Worth</option>
+							<option value="Arlington">Arlington</option>
+							<option value="New York">San Antonio</option>
+							<option value="Washington">Fort Worth</option>
+							<option value="Boston">Arlington</option>
+							</select> -->
+					</p>
+					<p>
+						<label>Year of Survey: </label> <input id="surveyyear" type="text"
+							name='survey_year' placeholder="Survey Year">
+					</p>
+					<p>
+						<label>Zip Code: </label> <input id="zipcode" type="text"
+							name='survey_zipcode' placeholder="Zip Code">
+					</p>
+					<p>
+						<label>Occupation: </label> <input id="occupation" type="text"
+							name='survey_occupation' placeholder="Occupation">
+					</p>
+					<p>
+						<label>Chronic Disease:</label> <select form="registration" name='survey_chronic' size=0 autofocus>
+							<option value="2102" selected="selected">Cancer</option>
+							<option value="2103">Diabetes</option>
+							<option value="2105">Arthritis</option>
+							<option value="2106">Asthma</option>
+						</select>
+					</p>
+					<br />
+					<br />
+
+				</fieldset>
+
+				<fieldset id="nutrition">
+					<h4 align='center'>Nutrition Habits Questionnaire</h4>
+					<p>
+						<label>Smoking?</label> <select form="registration" name='survey_smoking' id='smoking' autofocus>
+							<option value="Y">Yes</option>
+							<option value="N" selected='selected'>No</option>
+						</select>
+					</p>
+					<p>
+						<label>Alcohol?</label> <select form="registration" name='survey_alcohol' id='alcohol' autofocus>
+							<option value="Y">Yes</option>
+							<option value="N" selected='selected'>No</option>
+						</select>
+					</p>
+					<p>
+						<label>How often do you exercise?</label> <select form="registration" size=0 autofocus>
+							<option value="daily">Daily Basis</option>
+							<option value="weekly">Weekly Basis</option>
+							<option value="monthly">Monthly Basis</option>
+							<option value="none" selected='selected'>None</option>
+						</select>
+					</p>
+					<p>
+						<label>Height (in cms):</label> <input id="height" type="text" name='survey_height' placeholder="Height (in cms)">
+					</p>
+					<p>
+						<label>Weight (in lbs):</label> <input id="weight" type="text"
+							name='survey_weight' placeholder="Weight (in lbs)">
+					</p>
+					<p>
+						<label>Vitamin intake on a regular basis?</label> <select
+							form="registration" size=0 autofocus>
+							<option value="Y" selected='selected'>Yes</option>
+							<option value="N">No</option>
+						</select>
+					</p>
+					<p>
+						<label>What food timings do you follow daily?</label> <select
+							form="registration" size=0 autofocus>
+							<option value="Regular" selected='selected'>Regular</option>
+							<option value="Irregular">Irregular</option>
+						</select>
+					</p>
+				</fieldset>
+
+				<fieldset id="actions">
+					<div style="width: 600px; margin-right: auto; margin-left: auto; position: relative;">
+
+						<input type="submit" id="submit" value="Submit Survey">
+						<input type="reset" id="Cancel" value="Cancel">
+
+					</div>
+				</fieldset>
+
+
+			</form>
+		</div>
+	</div>
+
+	<div class='styleform'>
+		<footer>
+
+			<p>
+				Health Surveillance &#169; UTA 2014<br /> Contact information:
+				<a href="mailto:someone@example.com">email@email.com</a>
+			</p>
+
+		</footer>
+	</div>
+
+</body>
+</html>
